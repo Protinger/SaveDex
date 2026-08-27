@@ -25,3 +25,8 @@ local.properties
 
 # Kotlin
 .kotlin/
+
+# .NET bridge (dotnet-bridge/)
+dotnet-bridge/**/bin/
+dotnet-bridge/**/obj/
+dotnet-bridge/**/*.sav
