@@ -1,0 +1,27 @@
+*.iml
+.gradle/
+.claude/
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Android Studio
+*.hprof
+.navigation/
+
+# Keystore files
+*.jks
+*.keystore
+
+# Log files
+*.log
+
+# Kotlin
+.kotlin/

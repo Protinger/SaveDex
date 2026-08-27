@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SaveDex</string>
+    <string name="placeholder_title">SaveDex</string>
+    <string name="placeholder_subtitle">Module scaffolding ready. Save file tooling lands in the next phase.</string>
+</resources>
