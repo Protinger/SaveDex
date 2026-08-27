@@ -1,0 +1,1 @@
+C:\Claudio\SaveDex\dotnet-bridge\PkhexBridge.Android\bin\Release\net10.0-android\android-x64\publish\_Microsoft.Android.Resource.Designer.dll

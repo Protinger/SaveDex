@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PkhexBridge.Android</name>
+    </assembly>
+    <members>
+        <member name="T:SaveDex.PkhexBridge.NativeExports">
+            <summary>
+            Raw-JNI spike: only used under `dotnet publish -p:PublishAot=true`,
+            alongside &lt;NativeLib&gt;Shared&lt;/NativeLib&gt; in the csproj. Exists
+            to test whether the Android SDK's NativeAOT NDK cross-compilation setup
+            (see dotnet-bridge/README.md) actually produces a loadable .so, before
+            investing in real JNI marshaling for <see cref="T:SaveDex.PkhexBridge.SaveBridge"/>. Unrelated
+            to <see cref="T:SaveDex.PkhexBridge.SaveBridge"/>/<see cref="T:SaveDex.PkhexBridge.SaveSummary"/>, which are the
+            (ruled-out) automatic-JCW/Mono spike.
+            </summary>
+        </member>
+        <member name="T:SaveDex.PkhexBridge.SaveBridge">
+            <summary>
+            Entry point exposed to Kotlin/Java. Must derive from
+            <see cref="T:Java.Lang.Object"/> so the .NET-for-Android build emits a Java
+            Callable Wrapper for it.
+            </summary>
+        </member>
+        <member name="M:SaveDex.PkhexBridge.SaveBridge.LoadSave(System.Byte[])">
+            <summary>
+            Detects the save type and summarizes the lead party Pokémon.
+            Throws <see cref="T:Java.Lang.IllegalArgumentException"/> (a real Java
+            exception, catchable from Kotlin) if <paramref name="data"/> isn't a
+            save PKHeX recognizes.
+            </summary>
+        </member>
+        <member name="T:SaveDex.PkhexBridge.SaveSummary">
+            <summary>
+            Minimal Java-callable result of a save-file load. Must derive from
+            <see cref="T:Java.Lang.Object"/> (not be a plain C# POCO) for the
+            .NET-for-Android build to emit a Java Callable Wrapper for it in the AAR.
+            </summary>
+        </member>
+        <member name="T:SaveDex.PkhexBridge.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+    </members>
+</doc>

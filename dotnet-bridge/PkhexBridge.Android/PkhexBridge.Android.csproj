@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- PKHeX.Core 26.8.26 (NuGet) only ships a net10.0 asset group, so this
+         must target net10.0-android rather than an older Android TFM. -->
+    <TargetFramework>net10.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>26</SupportedOSPlatformVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>SaveDex.PkhexBridge</RootNamespace>
+
+    <!-- This is a plain Android class library (AAR), not an app: consumed
+         from the Kotlin :core-pkhex-bridge module, not run standalone. -->
+    <OutputType>Library</OutputType>
+    <AndroidApplication>false</AndroidApplication>
+
+    <!-- Keep the license-required PKHeX.Core dependency accepted non-interactively. -->
+    <AcceptLicense>true</AcceptLicense>
+
+    <!-- Only takes effect under `dotnet publish -p:PublishAot=true`: tells
+         ILCompiler to emit a shared library (.so) instead of an app binary,
+         for the raw-JNI NativeAOT spike (see NativeExports.cs). Does not
+         affect the normal Mono/JCW class-library build above. -->
+    <NativeLib Condition=" '$(PublishAot)' == 'true' ">Shared</NativeLib>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PKHeX.Core" Version="26.8.26" />
+  </ItemGroup>
+
+</Project>

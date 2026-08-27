@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "oWbylX1mHLA=",
+  "success": true,
+  "projectFilePath": "C:\\Claudio\\SaveDex\\dotnet-bridge\\PkhexBridge.Native\\PkhexBridge.Native.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Álvaro\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\10.0.11\\microsoft.dotnet.ilcompiler.10.0.11.nupkg.sha512",
+    "C:\\Users\\Álvaro\\.nuget\\packages\\microsoft.net.illink.tasks\\10.0.11\\microsoft.net.illink.tasks.10.0.11.nupkg.sha512",
+    "C:\\Users\\Álvaro\\.nuget\\packages\\pkhex.core\\26.8.26\\pkhex.core.26.8.26.nupkg.sha512",
+    "C:\\Users\\Álvaro\\.nuget\\packages\\runtime.linux-x64.microsoft.dotnet.ilcompiler\\10.0.11\\runtime.linux-x64.microsoft.dotnet.ilcompiler.10.0.11.nupkg.sha512",
+    "C:\\Users\\Álvaro\\.nuget\\packages\\microsoft.netcore.app.runtime.nativeaot.linux-bionic-x64\\10.0.11\\microsoft.netcore.app.runtime.nativeaot.linux-bionic-x64.10.0.11.nupkg.sha512",
+    "C:\\Users\\Álvaro\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\10.0.11\\runtime.win-x64.microsoft.dotnet.ilcompiler.10.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

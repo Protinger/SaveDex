@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- The real bridge: PKHeX.Core behind hand-written JNI exports, via
+         NativeAOT -> linux-bionic .so (the path proven in
+         PkhexBridge.Native.Poc/; see ../README.md for why the Mono/JCW/AAR
+         path in PkhexBridge.Android/ doesn't work). -->
+    <TargetFramework>net10.0</TargetFramework>
+    <RuntimeIdentifier>linux-bionic-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishAot>true</PublishAot>
+    <OutputType>Library</OutputType>
+    <NativeLib>Shared</NativeLib>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>SaveDex.PkhexBridge.Native</RootNamespace>
+    <!-- System.loadLibrary("PkhexBridgeNative") from Kotlin looks for
+         libPkhexBridgeNative.so; ILCompiler doesn't add the "lib" prefix. -->
+    <AssemblyName>libPkhexBridgeNative</AssemblyName>
+  </PropertyGroup>
+
+  <Import Project="BionicNativeAot.targets" />
+
+  <ItemGroup>
+    <PackageReference Include="PKHeX.Core" Version="26.8.26" />
+  </ItemGroup>
+
+</Project>

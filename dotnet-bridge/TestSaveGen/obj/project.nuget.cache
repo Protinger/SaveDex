@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zM8Qo9X9QZE=",
+  "success": true,
+  "projectFilePath": "C:\\Claudio\\SaveDex\\dotnet-bridge\\TestSaveGen\\TestSaveGen.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Álvaro\\.nuget\\packages\\pkhex.core\\26.8.26\\pkhex.core.26.8.26.nupkg.sha512"
+  ],
+  "logs": []
+}

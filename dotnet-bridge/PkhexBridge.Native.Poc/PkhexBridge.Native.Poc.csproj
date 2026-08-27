@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Minimal round-trip PoC: does a NativeAOT .so, hand-exporting one JNI
+         symbol, actually load and run under Kotlin on the emulator? No
+         Android SDK / JCW / Java.Lang.Object involved on purpose — this is
+         the raw-JNI path, not the (already-ruled-out) automatic-bindings one.
+         Pattern and BionicNativeAot.targets taken from the only working
+         reference for this found during research:
+         https://github.com/josephmoresena/NativeAOT-AndroidHelloJniLib -->
+    <TargetFramework>net10.0</TargetFramework>
+    <RuntimeIdentifier>linux-bionic-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishAot>true</PublishAot>
+    <OutputType>Library</OutputType>
+    <NativeLib>Shared</NativeLib>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- Final artifact name: System.loadLibrary("PkhexBridgeNative") from
+         Kotlin looks for libPkhexBridgeNative.so; ILCompiler doesn't add
+         the "lib" prefix itself. -->
+    <AssemblyName>libPkhexBridgeNative</AssemblyName>
+  </PropertyGroup>
+
+  <!-- Reference repo's NDK cross-compilation workarounds for Windows hosts
+       (DisableUnsupportedError bypass, .cmd wrappers around NDK clang,
+       _init/_fini exports-file fixup for newer NDKs). -->
+  <Import Project="BionicNativeAot.targets" />
+
+</Project>

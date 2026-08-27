@@ -1,0 +1,13 @@
+C:\Claudio\SaveDex\dotnet-bridge\PkhexBridge.Native\obj\Release\net10.0\linux-bionic-x64\PkhexBridge.Native.csproj.AssemblyReference.cache
+C:\Claudio\SaveDex\dotnet-bridge\PkhexBridge.Native\obj\Release\net10.0\linux-bionic-x64\PkhexBridge.Native.GeneratedMSBuildEditorConfig.editorconfig
+C:\Claudio\SaveDex\dotnet-bridge\PkhexBridge.Native\obj\Release\net10.0\linux-bionic-x64\PkhexBridge.Native.AssemblyInfoInputs.cache
+C:\Claudio\SaveDex\dotnet-bridge\PkhexBridge.Native\obj\Release\net10.0\linux-bionic-x64\PkhexBridge.Native.AssemblyInfo.cs
+C:\Claudio\SaveDex\dotnet-bridge\PkhexBridge.Native\obj\Release\net10.0\linux-bionic-x64\PkhexBridge.Native.csproj.CoreCompileInputs.cache
+C:\Claudio\SaveDex\dotnet-bridge\PkhexBridge.Native\obj\Release\net10.0\linux-bionic-x64\PkhexBridge.Native.sourcelink.json
+C:\Claudio\SaveDex\dotnet-bridge\PkhexBridge.Native\bin\Release\net10.0\linux-bionic-x64\libPkhexBridgeNative.deps.json
+C:\Claudio\SaveDex\dotnet-bridge\PkhexBridge.Native\bin\Release\net10.0\linux-bionic-x64\libPkhexBridgeNative.dll
+C:\Claudio\SaveDex\dotnet-bridge\PkhexBridge.Native\bin\Release\net10.0\linux-bionic-x64\libPkhexBridgeNative.pdb
+C:\Claudio\SaveDex\dotnet-bridge\PkhexBridge.Native\obj\Release\net10.0\linux-bionic-x64\libPkhexBridgeNative.dll
+C:\Claudio\SaveDex\dotnet-bridge\PkhexBridge.Native\obj\Release\net10.0\linux-bionic-x64\refint\libPkhexBridgeNative.dll
+C:\Claudio\SaveDex\dotnet-bridge\PkhexBridge.Native\obj\Release\net10.0\linux-bionic-x64\libPkhexBridgeNative.pdb
+C:\Claudio\SaveDex\dotnet-bridge\PkhexBridge.Native\obj\Release\net10.0\linux-bionic-x64\ref\libPkhexBridgeNative.dll
