@@ -1,7 +1,0 @@
-V1.0 {
-    global:
-        DotNetRuntimeDebugHeader;
-        Java_com_savedex_core_pkhexbridge_NativeBridge_add;
-        Java_com_savedex_core_pkhexbridge_NativeBridge_loadSaveNative;
-    local: *;
-};
