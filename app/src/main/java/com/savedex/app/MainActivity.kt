@@ -15,6 +15,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -26,6 +27,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.savedex.app.games.GamesListScreen
 import com.savedex.app.ui.theme.SaveDexTheme
 import com.savedex.core.pkhexbridge.NativeBridge
 import dagger.hilt.android.AndroidEntryPoint
@@ -37,8 +39,23 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SaveDexTheme {
-                Scaffold { innerPadding ->
-                    PkhexBridgeDebugScreen(modifier = Modifier.padding(innerPadding))
+                var showBridgeDebugScreen by remember { mutableStateOf(false) }
+                if (showBridgeDebugScreen) {
+                    Scaffold { innerPadding ->
+                        Column(modifier = Modifier.padding(innerPadding)) {
+                            TextButton(onClick = { showBridgeDebugScreen = false }) {
+                                Text("Back to games")
+                            }
+                            PkhexBridgeDebugScreen()
+                        }
+                    }
+                } else {
+                    Column(modifier = Modifier.fillMaxSize()) {
+                        TextButton(onClick = { showBridgeDebugScreen = true }) {
+                            Text("PKHeX bridge debug")
+                        }
+                        GamesListScreen(modifier = Modifier.weight(1f))
+                    }
                 }
             }
         }
