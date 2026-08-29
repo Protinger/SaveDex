@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+      Broad access to emulator save files under Android/data/<pkg>/... across
+      several apps we don't control. StorageAccessManager falls back to a
+      user-picked SAF tree (ACTION_OPEN_DOCUMENT_TREE) when this is denied.
+    -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+</manifest>
