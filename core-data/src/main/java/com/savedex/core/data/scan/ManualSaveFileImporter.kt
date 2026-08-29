@@ -26,7 +26,10 @@ class ManualSaveFileImporter @Inject constructor(
 
     /** Null if [uri] no longer resolves to a real document. */
     fun import(uri: Uri, emulator: Emulator): SaveFile? {
-        context.contentResolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        context.contentResolver.takePersistableUriPermission(
+            uri,
+            Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION,
+        )
         val document = DocumentFile.fromSingleUri(context, uri)?.takeIf { it.exists() } ?: return null
         return SaveFile(
             id = uri.toString(),
